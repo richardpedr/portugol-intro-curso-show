@@ -8,7 +8,7 @@ const Videos = () => {
       <header className="bg-curso-azul-escuro text-white py-4">
         <div className="container-curso">
           <h1 className="text-2xl md:text-3xl font-bold">
-            Curso de Portugol
+            Curso de portugol com alunos da UMJ
           </h1>
         </div>
       </header>
