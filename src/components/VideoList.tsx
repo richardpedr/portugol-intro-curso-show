@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Play, CheckCircle } from "lucide-react";
+import { Play } from "lucide-react";
 import VideoPlayer from './VideoPlayer';
 
 // Dados dos vídeos (você pode substituir pelos seus próprios vídeos)
@@ -93,24 +93,17 @@ const VideoList = () => {
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                 <div className="w-16 h-16 rounded-full bg-white bg-opacity-80 flex items-center justify-center">
-                  <Play className="h-8 w-8 text-curso-azul-destaque" />
+                  <Play className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
-              <Badge className="absolute top-3 right-3 bg-curso-azul-destaque">
+              <Badge className="absolute top-3 right-3 bg-blue-600">
                 {video.duration}
               </Badge>
             </div>
-            <CardHeader className="pb-2">
-              <div className="flex justify-between items-start">
-                <CardTitle className="text-lg">{video.title}</CardTitle>
-              </div>
-              <Badge variant="outline" className="mt-1">
-                {video.module}
-              </Badge>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <CardDescription>{video.description}</CardDescription>
-            </CardContent>
+            <div className="p-4">
+              <h3 className="text-lg font-bold mb-1">{video.title}</h3>
+              <p className="text-gray-600 text-sm">{video.description}</p>
+            </div>
           </Card>
         ))}
       </div>
