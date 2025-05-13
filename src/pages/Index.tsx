@@ -3,9 +3,10 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import CourseModules from '@/components/CourseModules';
-import RegistrationForm from '@/components/RegistrationForm';
 import Footer from '@/components/Footer';
 import { Separator } from "@/components/ui/separator";
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -101,15 +102,15 @@ const Index = () => {
           <div className="container-curso">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">Pronto para começar sua jornada na programação?</h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Inscreva-se agora e dê o primeiro passo para se tornar um programador!
+              Acesse agora nossos vídeos e comece a aprender Portugol!
             </p>
-            <a href="#inscricao" className="inline-block bg-white text-curso-azul-escuro font-medium px-8 py-3 rounded-md hover:bg-gray-100 transition-colors duration-300">
-              Inscrever-se
-            </a>
+            <Link to="/videos">
+              <Button className="bg-white text-curso-azul-escuro font-medium px-8 py-6 rounded-md hover:bg-gray-100 transition-colors duration-300">
+                Acessar Vídeos do Curso
+              </Button>
+            </Link>
           </div>
         </section>
-        
-        <RegistrationForm />
       </main>
       
       <Footer />
