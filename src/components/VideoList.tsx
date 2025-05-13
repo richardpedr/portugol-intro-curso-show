@@ -5,60 +5,105 @@ import { Badge } from "@/components/ui/badge";
 import { Play } from "lucide-react";
 import VideoPlayer from './VideoPlayer';
 
-// Dados dos vídeos (você pode substituir pelos seus próprios vídeos)
+// Dados dos vídeos do curso de Portugol
 const videos = [
   {
     id: 1,
-    title: "Introdução ao Portugol",
-    description: "Conheça o Portugol e configure seu ambiente de desenvolvimento",
-    duration: "15:30",
+    title: "Apresentação do curso",
+    description: "Introdução ao curso de Portugol e visão geral do conteúdo",
+    duration: "10:15",
     module: "Módulo 1",
-    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Intro+ao+Portugol",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Apresentação+do+curso",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
   },
   {
     id: 2,
-    title: "Variáveis e Tipos de Dados",
-    description: "Aprenda a criar e utilizar variáveis em Portugol",
-    duration: "20:45",
+    title: "O que é programação",
+    description: "Conceitos básicos e fundamentos da programação",
+    duration: "12:30",
     module: "Módulo 1",
-    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Variáveis",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=O+que+é+programação",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
   },
   {
     id: 3,
-    title: "Estruturas Condicionais",
-    description: "Saiba como implementar decisões em seus programas",
-    duration: "18:20",
-    module: "Módulo 2",
-    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Condicionais",
+    title: "Introdução à Lógica de Programação pt1",
+    description: "Primeiros conceitos sobre lógica de programação",
+    duration: "15:45",
+    module: "Módulo 1",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Lógica+pt1",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
   },
   {
     id: 4,
-    title: "Laços de Repetição",
-    description: "Aprenda a criar loops e repetições em seus algoritmos",
-    duration: "25:10",
-    module: "Módulo 2",
-    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Loops",
+    title: "Introdução à Lógica de Programação pt2",
+    description: "Continuação dos conceitos de lógica de programação",
+    duration: "14:20",
+    module: "Módulo 1",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Lógica+pt2",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
   },
   {
     id: 5,
-    title: "Vetores e Matrizes",
-    description: "Trabalhe com coleções de dados em Portugol",
-    duration: "22:30",
-    module: "Módulo 3",
-    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Vetores",
+    title: "Introdução à Lógica de Programação pt3",
+    description: "Conclusão dos conceitos de lógica de programação",
+    duration: "16:10",
+    module: "Módulo 1",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Lógica+pt3",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
   },
   {
     id: 6,
-    title: "Funções e Procedimentos",
-    description: "Crie código reutilizável com funções em Portugol",
-    duration: "27:15",
+    title: "Introdução às Estruturas de Controle pt1",
+    description: "Conceitos básicos de estruturas condicionais",
+    duration: "18:30",
+    module: "Módulo 2",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Estruturas+pt1",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
+  },
+  {
+    id: 7,
+    title: "Introdução às Estruturas de Controle pt2",
+    description: "Aprofundamento em estruturas condicionais",
+    duration: "17:45",
+    module: "Módulo 2",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Estruturas+pt2",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
+  },
+  {
+    id: 8,
+    title: "Introdução laços de repetição",
+    description: "Conceitos iniciais de loops e iterações",
+    duration: "20:15",
+    module: "Módulo 2",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Laços+Intro",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
+  },
+  {
+    id: 9,
+    title: "Aula faça, enquanto e para",
+    description: "Detalhamento dos diferentes tipos de laços: do-while, while e for",
+    duration: "22:30",
+    module: "Módulo 2",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Faça+Enquanto+Para",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
+  },
+  {
+    id: 10,
+    title: "Exercício pt1",
+    description: "Aplicação prática dos conceitos aprendidos - parte 1",
+    duration: "25:10",
     module: "Módulo 3",
-    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Funções",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Exercício+pt1",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
+  },
+  {
+    id: 11,
+    title: "Exercício pt2",
+    description: "Aplicação prática dos conceitos aprendidos - parte 2",
+    duration: "23:45",
+    module: "Módulo 3",
+    thumbnail: "https://placehold.co/640x360/1e3a8a/ffffff?text=Exercício+pt2",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Substitua pelo link do seu vídeo
   }
 ];
