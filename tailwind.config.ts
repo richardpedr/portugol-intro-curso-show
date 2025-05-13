@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        curso: {
+          'azul-claro': '#4A9EEA',
+          'azul-escuro': '#1C3E6C',
+          'azul-destaque': '#0078D7',
+          'cinza-claro': '#F5F7FA',
+          'cinza-medio': '#E2E8F0',
+          'text-primary': '#333333',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +93,21 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'float': 'float 5s ease-in-out infinite'
+			},
+      fontFamily: {
+        'sans': ['Inter', 'sans-serif'],
+        'title': ['Poppins', 'sans-serif']
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
